@@ -1,0 +1,12 @@
+D:\测试\hasaget\MicroCommon\bin\Debug\netstandard2.0\CoreUtility.dll
+D:\测试\hasaget\MicroCommon\obj\Debug\netstandard2.0\MicroCommon.csprojAssemblyReference.cache
+D:\测试\hasaget\MicroCommon\obj\Debug\netstandard2.0\MicroCommon.AssemblyInfoInputs.cache
+D:\测试\hasaget\MicroCommon\obj\Debug\netstandard2.0\MicroCommon.AssemblyInfo.cs
+D:\测试\hasaget\MicroCommon\bin\Debug\netstandard2.0\MicroCommon.deps.json
+D:\测试\hasaget\MicroCommon\bin\Debug\netstandard2.0\MicroCommon.dll
+D:\测试\hasaget\MicroCommon\bin\Debug\netstandard2.0\MicroCommon.pdb
+D:\测试\hasaget\MicroCommon\bin\Debug\netstandard2.0\CoreUtility.pdb
+D:\测试\hasaget\MicroCommon\obj\Debug\netstandard2.0\MicroCommon.csproj.CoreCompileInputs.cache
+D:\测试\hasaget\MicroCommon\obj\Debug\netstandard2.0\MicroCommon.csproj.CopyComplete
+D:\测试\hasaget\MicroCommon\obj\Debug\netstandard2.0\MicroCommon.dll
+D:\测试\hasaget\MicroCommon\obj\Debug\netstandard2.0\MicroCommon.pdb

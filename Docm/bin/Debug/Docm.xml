@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Docm</name>
+    </assembly>
+    <members>
+        <member name="M:Docm.Business.Guest.Guest.Logon(System.String,System.String)">
+            <summary>
+            登陆
+            </summary>
+            <param name="account"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Docm.Business.Guest.Guest.CreateImg">
+            <summary>
+            验证码图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Docm.Business.Guest.Imp.AccountInfo.account">
+            <summary>
+            账户
+            </summary>
+        </member>
+        <member name="P:Docm.Business.Guest.Imp.AccountInfo.password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="M:Docm.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args">外部执行的参数 命令 如：dotnet run 11111</param>
+        </member>
+        <member name="M:Docm.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            netcore 3.1 暂时没有提供vs在线源码(可以去github里面下载下来查看) 可以换成 2.2版本 ，在工具-选项-文本编辑器-c#-高级 将支持到导航反编译打开 
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

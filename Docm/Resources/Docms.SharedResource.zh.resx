@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CAS验证码" xml:space="preserve">
+    <value>CAS验证码</value>
+  </data>
+  <data name="EP买进已关闭" xml:space="preserve">
+    <value>EP买进已关闭</value>
+  </data>
+  <data name="EP交易提醒" xml:space="preserve">
+    <value>EP交易提醒</value>
+  </data>
+  <data name="EP卖出已关闭" xml:space="preserve">
+    <value>EP卖出已关闭</value>
+  </data>
+  <data name="USDT地址不能为空" xml:space="preserve">
+    <value>USDT地址不能为空</value>
+  </data>
+  <data name="上一个订单未完成，不能增加新的订单" xml:space="preserve">
+    <value>上一个订单未完成，不能增加新的订单</value>
+  </data>
+  <data name="上个订单存在违规，当前暂时禁止交易" xml:space="preserve">
+    <value>上个订单存在违规，当前暂时禁止交易</value>
+  </data>
+  <data name="不存在此等级" xml:space="preserve">
+    <value>不存在此等级</value>
+  </data>
+  <data name="交易中订单不能撤销" xml:space="preserve">
+    <value>交易中订单不能撤销</value>
+  </data>
+  <data name="交易大厅买入关闭" xml:space="preserve">
+    <value>交易大厅买入关闭</value>
+  </data>
+  <data name="交易大厅卖出关闭" xml:space="preserve">
+    <value>交易大厅卖出关闭</value>
+  </data>
+  <data name="交易订单不存在" xml:space="preserve">
+    <value>交易订单不存在</value>
+  </data>
+  <data name="交易过于频繁" xml:space="preserve">
+    <value>交易过于频繁</value>
+  </data>
+  <data name="你来晚了，订单已被交易了" xml:space="preserve">
+    <value>你来晚了，订单已被交易了</value>
+  </data>
+  <data name="信用点过低，无法进行交易" xml:space="preserve">
+    <value>信用点过低，无法进行交易</value>
+  </data>
+  <data name="升级失败" xml:space="preserve">
+    <value>升级失败</value>
+  </data>
+  <data name="参数不能为空" xml:space="preserve">
+    <value>参数不能为空</value>
+  </data>
+  <data name="参数错误" xml:space="preserve">
+    <value>参数错误</value>
+  </data>
+  <data name="复投等级不能小于原等级" xml:space="preserve">
+    <value>复投等级不能小于原等级</value>
+  </data>
+  <data name="安全密码长度不能小于6位" xml:space="preserve">
+    <value>安全密码长度不能小于6位</value>
+  </data>
+  <data name="安全码不能为空" xml:space="preserve">
+    <value>安全码不能为空</value>
+  </data>
+  <data name="安全码错误" xml:space="preserve">
+    <value>安全码错误</value>
+  </data>
+  <data name="密码为空" xml:space="preserve">
+    <value>密码为空</value>
+  </data>
+  <data name="左右区参数错误" xml:space="preserve">
+    <value>左右区参数错误</value>
+  </data>
+  <data name="当前区已经被放置过了账户" xml:space="preserve">
+    <value>当前区已经被放置过了账户</value>
+  </data>
+  <data name="当前节点不在当前子节点中" xml:space="preserve">
+    <value>当前节点不在当前子节点中</value>
+  </data>
+  <data name="当前订单是自己订单，请不要重复操作" xml:space="preserve">
+    <value>当前订单是自己订单，请不要重复操作</value>
+  </data>
+  <data name="截图保持在10张之内" xml:space="preserve">
+    <value>截图保持在10张之内</value>
+  </data>
+  <data name="推荐人不存在" xml:space="preserve">
+    <value>推荐人不存在</value>
+  </data>
+  <data name="推荐人不能为空" xml:space="preserve">
+    <value>推荐人不能为空</value>
+  </data>
+  <data name="放置id不存在" xml:space="preserve">
+    <value>放置id不存在</value>
+  </data>
+  <data name="放置id不能为空" xml:space="preserve">
+    <value>放置id不能为空</value>
+  </data>
+  <data name="旧密码错误" xml:space="preserve">
+    <value>旧密码错误</value>
+  </data>
+  <data name="暂不支持子账号登陆" xml:space="preserve">
+    <value>暂不支持子账号登陆</value>
+  </data>
+  <data name="有未交易完成的订单" xml:space="preserve">
+    <value>有未交易完成的订单</value>
+  </data>
+  <data name="本月子账号创建个数已经到达上限" xml:space="preserve">
+    <value>本月子账号创建个数已经到达上限</value>
+  </data>
+  <data name="用户不存在" xml:space="preserve">
+    <value>用户不存在</value>
+  </data>
+  <data name="留言内容不能为空" xml:space="preserve">
+    <value>留言内容不能为空</value>
+  </data>
+  <data name="登陆密码长度不能小于6位" xml:space="preserve">
+    <value>登陆密码长度不能小于6位</value>
+  </data>
+  <data name="积分不能小于等于0" xml:space="preserve">
+    <value>积分不能小于等于0</value>
+  </data>
+  <data name="积分不足，缺少" xml:space="preserve">
+    <value>积分不足，缺少</value>
+  </data>
+  <data name="积分数量不能小于等于0" xml:space="preserve">
+    <value>积分数量不能小于等于0</value>
+  </data>
+  <data name="积分数量必须为100的整数倍" xml:space="preserve">
+    <value>积分数量必须为100的整数倍</value>
+  </data>
+  <data name="等级不能为空" xml:space="preserve">
+    <value>等级不能为空</value>
+  </data>
+  <data name="至少得上传一张截图" xml:space="preserve">
+    <value>至少得上传一张截图</value>
+  </data>
+  <data name="节点ID/邮箱格式为空" xml:space="preserve">
+    <value>节点ID/邮箱格式为空</value>
+  </data>
+  <data name="订单不存在" xml:space="preserve">
+    <value>订单不存在</value>
+  </data>
+  <data name="订单完成24小时之后才能继续下一个订单" xml:space="preserve">
+    <value>订单完成24小时之后才能继续下一个订单</value>
+  </data>
+  <data name="语言描述不能为空" xml:space="preserve">
+    <value>语言描述不能为空</value>
+  </data>
+  <data name="请先激活账户" xml:space="preserve">
+    <value>请先激活账户</value>
+  </data>
+  <data name="请登录APP确认订单" xml:space="preserve">
+    <value>请登录APP确认订单</value>
+  </data>
+  <data name="账号/密码不正确" xml:space="preserve">
+    <value>账号/密码不正确</value>
+  </data>
+  <data name="账号/密码错误" xml:space="preserve">
+    <value>账号/密码错误</value>
+  </data>
+  <data name="账号信息错误" xml:space="preserve">
+    <value>账号信息错误</value>
+  </data>
+  <data name="超出当前等级EP卖出的最高限制" xml:space="preserve">
+    <value>超出当前等级EP卖出的最高限制</value>
+  </data>
+  <data name="邮箱填写错误" xml:space="preserve">
+    <value>邮箱填写错误</value>
+  </data>
+  <data name="邮箱已存在" xml:space="preserve">
+    <value>邮箱已存在</value>
+  </data>
+  <data name="邮箱错误" xml:space="preserve">
+    <value>邮箱错误</value>
+  </data>
+  <data name="钱包不存在" xml:space="preserve">
+    <value>钱包不存在</value>
+  </data>
+  <data name="错误操作" xml:space="preserve">
+    <value>错误操作</value>
+  </data>
+  <data name="验证码不能为空" xml:space="preserve">
+    <value>验证码不能为空</value>
+  </data>
+  <data name="验证码错误" xml:space="preserve">
+    <value>验证码错误</value>
+  </data>
+</root>
