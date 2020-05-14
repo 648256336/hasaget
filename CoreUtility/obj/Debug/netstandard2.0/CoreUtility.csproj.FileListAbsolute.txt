@@ -6,3 +6,4 @@ D:\测试\hasaget\CoreUtility\bin\Debug\netstandard2.0\CoreUtility.pdb
 D:\测试\hasaget\CoreUtility\obj\Debug\netstandard2.0\CoreUtility.csproj.CoreCompileInputs.cache
 D:\测试\hasaget\CoreUtility\obj\Debug\netstandard2.0\CoreUtility.dll
 D:\测试\hasaget\CoreUtility\obj\Debug\netstandard2.0\CoreUtility.pdb
+D:\测试\hasaget\CoreUtility\obj\Debug\netstandard2.0\CoreUtility.csprojAssemblyReference.cache

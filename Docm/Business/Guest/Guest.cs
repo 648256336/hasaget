@@ -7,11 +7,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
 using System.Drawing.Imaging;
+using Dapper;
+using Microsoft.Extensions.Configuration;
+using System.Data.Common;
+using StackExchange.Redis;
 
 namespace Docm.Business.Guest
 {
-    public class Guest:IGuest
+    public class Guest:Repository, IGuest
     {
+        private readonly ConnectionMultiplexer _redis;
+        public Guest(DbProviderFactory factory, IConfiguration configuration, ConnectionMultiplexer redis) : base(factory, configuration)
+        {
+            _redis = redis;
+        }
         /// <summary>
         /// 登陆
         /// </summary>
@@ -20,6 +29,7 @@ namespace Docm.Business.Guest
         /// <returns></returns>
         public async Task<string> Logon(string account,string password)
         {
+            
             return "";
         }
 

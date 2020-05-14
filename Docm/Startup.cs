@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
@@ -16,6 +17,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -66,7 +69,7 @@ namespace Docm
                 .AllowAnyHeader();//允许所有类型的Header
             }));
             
-            //services.AddSingleton(ConnectionMultiplexer.Connect(Configuration["RedisString"]));
+            services.AddSingleton(ConnectionMultiplexer.Connect(Configuration["Logging:RedisString"]));
             //redis引用
             //var redis = ConnectionMultiplexer.Connect(Configuration["Logging:RedisString"]);
             //redis.GetDatabase().SetAdd("lirui","123123");
@@ -95,6 +98,8 @@ namespace Docm
                 };
             });
             #endregion
+            //sql数据库连接工厂
+            services.AddSingleton<DbProviderFactory>(SqlClientFactory.Instance);
         }
 
         //此方法由运行时调用。使用此方法配置HTTP请求管道。
