@@ -8,6 +8,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Docm.Business.Guest;
+using Docm.Business.Guest.Imp;
 using MicroCommon.Middleware;
 using MicroCommon.Model;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -27,6 +29,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using StackExchange.Redis;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace Docm
 {
@@ -49,19 +52,40 @@ namespace Docm
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             //添加api控制器服务
             services.AddControllers();
-            #region api说明文档配置
+            #region Swagger说明文档配置
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
+                c.OperationFilter<AddResponseHeadersFilter>();
+                c.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
+                c.OperationFilter<SecurityRequirementsOperationFilter>();
+                c.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+                {
+                    
+                    Description = "JWT授权(数据将在请求头中进行传输) 直接在下框中输入Bearer {token}（注意两者之间是一个空格）\"",
+                    Name = "Authorization",//jwt默认的参数名称
+                    In = ParameterLocation.Header,//jwt默认存放Authorization信息的位置(请求头中)
+                    Type = SecuritySchemeType.ApiKey
+                });
             });
             #endregion
-            //添加jwt 验证服务
+            //添加jwt 验证服务 验证token 不用进到具体方法 可以进行验证 提高效率 但是无法跟进调试，打印bug问题
             services.Configure<TokenManagement>(Configuration.GetSection("tokenConfig"));
             var token = Configuration.GetSection("tokenConfig").Get<TokenManagement>();
+            //jwt验证 1：(假设)属于第三方的数据验证
+            //2:内部环境建议用对称加密，外部环境使用RSA加密（非对称加密，私有key与公有key加密，共有key暴露出去）
             services.AddJwtServices(token);
+            //Authorization 请求通过之后验证
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("admins", policy => policy
+                    .RequireRole("Admin")
+                    .RequireUserName("Arthur")
+                    .RequireClaim("password"));
+            });
             //添加域服务
             services.AddCors(options => options.AddPolicy(cors, builder => { 
                 builder.WithOrigins(Configuration["Cores"].Split(','))//限制网站 为"*" 不限制
@@ -100,6 +124,8 @@ namespace Docm
             #endregion
             //sql数据库连接工厂
             services.AddSingleton<DbProviderFactory>(SqlClientFactory.Instance);
+            services.AddScoped<IGuest, Guest>();
+            services.AddScoped<GetJwtToken>();
         }
 
         //此方法由运行时调用。使用此方法配置HTTP请求管道。

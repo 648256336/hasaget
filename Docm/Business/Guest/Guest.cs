@@ -17,9 +17,11 @@ namespace Docm.Business.Guest
     public class Guest:Repository, IGuest
     {
         private readonly ConnectionMultiplexer _redis;
-        public Guest(DbProviderFactory factory, IConfiguration configuration, ConnectionMultiplexer redis) : base(factory, configuration)
+        private readonly GetJwtToken _jwtToken;
+        public Guest(DbProviderFactory factory, IConfiguration configuration, ConnectionMultiplexer redis, GetJwtToken jwtToken) : base(factory, configuration)
         {
             _redis = redis;
+            _jwtToken = jwtToken;
         }
         /// <summary>
         /// 登陆
@@ -29,8 +31,17 @@ namespace Docm.Business.Guest
         /// <returns></returns>
         public async Task<string> Logon(string account,string password)
         {
+            var token= _jwtToken.GetHss(new AccountInfo
+            {
+                account = account,
+                password = password
+            });
+            return token;
+        }
+
+        public async Task TestCacheManage()
+        {
             
-            return "";
         }
 
         /// <summary>

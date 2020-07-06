@@ -7,7 +7,7 @@ namespace Docm.Business.Guest.Imp
 {
     public interface IGuest
     {
-
+        Task<string> Logon(string account, string password);
     }
     [Serializable]
     public class AccountInfo

@@ -30,8 +30,9 @@ namespace Docm
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
+                    ValidateLifetime = true,
                     //获取或设置要使用的Microsoft.IdentityModel.Tokens.SecurityKey用于签名验证。
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.
                     GetBytes(token.Secret)),
                     //获取或设置一个System.String，它表示将使用的有效发行者检查代币的发行者。
                     ValidIssuer = token.Issuer,
@@ -39,24 +40,12 @@ namespace Docm
                     ValidAudience = token.Audience,
                     ValidateIssuer = false,
                     ValidateAudience = false,
+                    //可以写扩展方法进行验证扩展
+                    //LifetimeValidator = () => { }
                 };
             });
             return services;
         }
 
-        public static string GetJwtToken(IOptions<TokenManagement> options, AccountInfo accountInfo)
-        {
-            //具体数据信息
-            var claims = new[]
-            {
-                new Claim( ClaimTypes.Name,accountInfo.account)
-            };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Value.Secret));
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var jwtToken = new JwtSecurityToken(options.Value.Issuer, options.Value.Audience, claims,
-                expires: DateTime.Now.AddMinutes(options.Value.AccessExpiration),
-                signingCredentials: credentials);
-            return new JwtSecurityTokenHandler().WriteToken(jwtToken);
-        }
     }
 }

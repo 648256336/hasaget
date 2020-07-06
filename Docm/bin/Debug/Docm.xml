@@ -28,6 +28,14 @@
             密码
             </summary>
         </member>
+        <member name="M:Docm.Controllers.WeatherForecastController.Logon(System.String,System.String)">
+            <summary>
+            登陆
+            </summary>
+            <param name="account"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
         <member name="M:Docm.Program.Main(System.String[])">
             <summary>
             

@@ -24,15 +24,15 @@ namespace MicroCommon.Middleware
             {
                 //返回友好的提示
                 var response = context.Response;
-                response.StatusCode = (int)HttpStatusCode.OK;
+                //response.StatusCode = (int)HttpStatusCode.OK;
                 //可以增加其他继承Exception 接口判断状态
-                if (e is Exception ex)
-                {
-                    response.StatusCode = (int)HttpStatusCode.Unauthorized;
-                }
+                //if (e is Exception ex)
+                //{
+                //    response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                //}
                 //输出错误信息
                 //var msg = rst.ToJson();
-                //await response.WriteAsync(msg).ConfigureAwait(false);
+                await response.WriteAsync(e.Message).ConfigureAwait(false);
             }
         }
     }
